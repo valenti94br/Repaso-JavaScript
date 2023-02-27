@@ -78,3 +78,23 @@ function primerosTresCaracteres(string) {
 }
 
   console.log(primerosTresCaracteres("Hola"))
+
+  /*Crea la función cuentaVocales que reciba un string como argumento y devuelva el número de vocales que contiene. Si el argumento no es un string, debe devolver el string "Debo ser ejecutada con un string".*/
+
+  function cuentaVocales(str) {
+    if (typeof str !== 'string') {
+      return 'Debo ser ejecutada con un string';
+    }
+  
+    let contador = 0;
+  
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u') {
+        contador++;
+      }
+    }
+  
+    return contador;
+  }
+
+  console.log(cuentaVocales("Hola"))
